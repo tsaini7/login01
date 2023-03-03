@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+* { box-sizing: border-box;}
+
+html, body { height: 100%;}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    color: #f9f9f9;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.ejemplo {
+    font-size: 16px;
+}
+.main {
+    padding: 3rem;
+    text-align: center;
+    box-sizing: border-box;
+    width: 540px;
+    border: solid #313136 ;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    text-transform: uppercase;
+
+}
+.textbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    border: none;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    background: #313136;
+    padding-left: 126px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #f9f9f9;
+    transition: 0.3s;
+}
+
+.textbox input:focus {
+border: none;
+}
+.textbox label {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform-origin: 0% 0%;
+    pointer-events: none;
+    top: 0px;
+    left: 1px;
+    height: 40px;
+    width: 110px;
+    border-radius: 27px 0px 0px 27px ;
+
+    /* OPCION UNO DE EL LABEL */
+/*     background: linear-gradient(270deg, rgba(49,49,54,1) 2%, rgba(80,113,250,1) 13%);
+ */    
+    /*OPCION 2 DE LABEL*/
+    /* background: #5071fa; */
+    transition: 0.3s;
+
+}
+
+.textbox input::placeholder {
+    color: rgb(255,255,255 / 50%);
+}
+
+/*MOVIMIENTO DEL PLACE HOLDER, PUEDE DEJARSE SIN EFECTO AL COMENTARLO */
+.textbox input:focus::placeholder {
+    translate: -200px;
+    scale: 0.0;
+    transition: 0.4s;
+    }
+/* AQUI FINALIZA EL MOVIMIENTO DEL PLACEHOLDER QUE PUEDE DEJARSE SIN EFECTO */
+
+
+/*ACTIVAR ESTO SI QUEREMOS QUE EL LABEL SE MUEVA AL ESTAR ACTIVO */
+.textbox
+:is(input:focus , input:valid) {
+   /* padding-left: 20px; */
+    border: none;
+}
+
+.textbox
+:is(input:focus , input:valid) 
+~ label {
+    /*translate: -110px 0px;*/
+    /* scale: 0.9; */
+    }
+/* ---------------------------- HASTA ACA TODO LO DESHABILITADO DEL LABEL ------------------*/
+
+
+/* clase de todos los botones, se pueden modificar a gusto.*/
+    .recupero {
+        margin: 5px 0 20px 0;
+        color: #f9f9f9;
+    }
+
+    .buttons {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+.btn {
+    margin: 5px 0 5px 0;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: NONE;
+}
+.btn:hover {
+    box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.75);
+}
+
+.iniciar {
+    background-color: #5071fa;
+    color: #f9f9f9;
+
+}
+
+.registrarse {
+    color: #5071fa;
+}
+
+/*FIN DE CLASES DE LOS BOTONES.*/
+
+.bg-default {
+    background: linear-gradient(270deg, rgba(49,49,54,1) 2%, rgba(80,113,250,1) 13%);
+}
+
+.inputValido {
+    background:linear-gradient(270deg, rgba(49,49,54,1) 2%, #008c1e 13%);
+    color: black;
+}
+
+.inputErroneo {
+    background:linear-gradient(270deg, rgba(49,49,54,1) 2%, #d40808 13%) ;
+    color: white;
+}
